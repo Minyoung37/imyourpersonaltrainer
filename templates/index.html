@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IPT</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans|Do+Hyeon|Noto+Sans+KR:400,700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Indie+Flower&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <style>
+         .wrap {
+             width:900px;
+             margin: auto auto 10px;
+             font-family: 'Nanum Pen Script', cursive;
+         }
+        .jumbotron {
+            z-index: 1;
+            position: relative;
+
+            background-image:
+        url(https://www.sheknows.com/wp-content/uploads/2018/04/full-body-workout.jpg?w=1920);
+
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: screen;
+            border-radius: 10px;
+        }
+        .display-3 {
+            font-family: 'Indie Flower', cursive;
+            font-weight: bold;
+            color: #0c2461;
+            font-size: large;
+        }
+        .display-4 {
+            font-family: 'Nanum Pen Script', cursive;
+            color: #f6b93b;
+        }
+        .center {
+            width: 100px;
+            margin: 0 auto;
+        }
+        .open_btn {
+            font-family: 'Indie Flower', cursive;
+            border: 1px solid #2C3A47;
+            border-radius: 10px;
+            background-color: rgba(0,0,0,0);
+            color: #2C3A47;
+            padding: 5px 5px;
+            width: 80px;
+        }
+        .show_btn {
+            border: 1px solid #0c2461;
+            border-radius: 10px;
+            background-color: #0c2461;
+            color: white;
+            padding: 10px;
+            width: 200px;
+            margin-bottom: 100px;
+        }
+        .nav-item {
+            color:#6a89cc;
+        }
+        .item_box {
+            width: 850px;
+            margin: auto;
+            font-family: 'Nanum Pen Script', cursive;
+            font-size: large;
+        }
+        .igts {
+            font-weight: 400;
+            border: 0 solid #ced6e0;
+            border-radius: 20px;
+            background-color: rgba(206, 214, 224, 0.3);
+            color: #2f3542;
+            padding: 5px 15px;
+            margin: 0 0 10px
+        }
+        .i_selected {
+            background-color: rgba (206, 214,224,1.0);
+        }
+        .std_workout_list {
+            font-weight: bold;
+            border: 0 solid #f6b93b;
+            border-radius: 20px;
+            background-color: rgba(250,211,144,0.3);
+            color: #f6b93b;
+            padding: 5px 15px;
+            margin: 0 0 20px 20px
+        }
+        .card-colums {
+            margin-top: 10px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="wrap">
+        <div class="jumbotron">
+            <h1 class="display-3">
+                I'm your personal trainer
+            </h1>
+            <h1 class="display-4">
+                오늘
+                <span style="color:green; font-size: larger;">운동</span>
+                뭐하지?
+            </h1>
+            <p class="lead" style="font-size: x-large" style="color:#2C3A47">
+                내 건강은 내가 지켜야죠? 비싼 PT 필요 없이 헬스장에서 또는 홈트로 내몸을 내가 관리합시다!
+                <br>
+                원하시는 운동 부위를 고르면 관련 영상을 볼 수 있어요! 오늘도 힘차게 운동 시작해보아요!
+            </p>
+
+            <hr class="my-4">
+            <p class="color:#gray" style="font-size: x-large">나만의 식단을 기록해 봅시다!</p>
+            <button type="button" class="open_btn center" style="font-weight: 600" onclick="showmain()">My Diet</button>
+        </div>
+    </div>
+    <div id="main" style>
+        <br>
+        <br>
+        <div class="item_box">
+            <div id="workout_list" style>
+                <div style class="form-check form-check-inline igt-all igt0">
+                        <button type="button" class="igts" value="어깨" onclick=""i_s숙elect(this)">어깨</btton></div>
+                <div style class="form-check form-check-inline igt-all igt0">
+                        <button type="button" class="igts" value="엉덩이" onclick=""i_select(this)">엉덩이</button></div>
+                <div style class="form-check form-check-inline igt-all igt0">
+                        <button type="button" class="igts" value="팔" onclick=""i_select(this)">팔</button></div>
+                <div style class="form-check form-check-inline igt-all igt0">
+                        <button type="button" class="igts" value="허리" onclick=""i_select(this)">허리</button></div>
+                <div style class="form-check form-check-inline igt-all igt0">
+                        <button type="button" class="igts" value="가슴" onclick=""i_select(this)">가슴</button></div>
+                <div style class="form-check form-check-inline igt-all igt0">
+                        <button type="button" class="igts" value="유산소" onclick=""i_select(this)">유산소</button></div>
+                <div style class="form-check form-check-inline igt-all igt0">
+                        <button type="button" class="igts" value="전신운동" onclick=""i_select(this)">전신운동</button></div>
+                <div style class="form-check form-check-inline igt-all igt0">
+                        <button type="button" class="igts" value="홈트" onclick=""i_select(this)">홈트</button></div>
+                <div style class="form-check form-check-inline igt-all igt0">
+                        <button type="button" class="igts" value="스트레칭" onclick=""i_select(this)">스트레칭</button></div>
+                <div style class="form-check form-check-inline igt-all igt0">
+                        <button type="button" class="igts" value="보충" onclick=""i_select(this)">보충제</button></div>
+                <div style class="form-check form-check-inline igt-all igt0">
+                        <button type="button" class="igts" value="식단" onclick=""i_select(this)">식단</button></div>
+            </div>
+        </div>
+    </div>
+    <label for=""><input type="text">제목</label>
+    <label for="">
+        <select name="" id="">
+            <option value="">팔</option>
+            <option value="">다리</option>
+            <option value="">엉덩이</option>
+            <option value="">어</option>
+        </select>
+    </label>
+    <label for="">
+        <input type="text">링크
+    </label>
+    <button>저장</button>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/A8DPNQjPvRo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</body>
+</html>
